@@ -127,6 +127,7 @@ object FrmCadCliente: TFrmCadCliente
     Color = clBtnFace
     DataField = 'Nome'
     DataSource = TabGlobal.DSClientes
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -143,6 +144,7 @@ object FrmCadCliente: TFrmCadCliente
     Color = clBtnFace
     DataField = 'Endere'#231'o'
     DataSource = TabGlobal.DSClientes
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -159,6 +161,7 @@ object FrmCadCliente: TFrmCadCliente
     Color = clBtnFace
     DataField = 'Bairro'
     DataSource = TabGlobal.DSClientes
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -175,6 +178,7 @@ object FrmCadCliente: TFrmCadCliente
     Color = clBtnFace
     DataField = 'Cidade'
     DataSource = TabGlobal.DSClientes
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -191,6 +195,7 @@ object FrmCadCliente: TFrmCadCliente
     Color = clBtnFace
     DataField = 'C'#243'digo'
     DataSource = TabGlobal.DSClientes
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -207,6 +212,7 @@ object FrmCadCliente: TFrmCadCliente
     Color = clBtnFace
     DataField = 'Cep'
     DataSource = TabGlobal.DSClientes
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -223,6 +229,7 @@ object FrmCadCliente: TFrmCadCliente
     Color = clBtnFace
     DataField = 'Telefone'
     DataSource = TabGlobal.DSClientes
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -239,8 +246,6 @@ object FrmCadCliente: TFrmCadCliente
     DataSource = TabGlobal.DSClientes
     Align = alTop
     TabOrder = 7
-    ExplicitLeft = 40
-    ExplicitTop = 117
   end
   object DBComboBox1: TDBComboBox
     Left = 311
@@ -250,6 +255,7 @@ object FrmCadCliente: TFrmCadCliente
     Color = clBtnFace
     DataField = 'Uf'
     DataSource = TabGlobal.DSClientes
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13

@@ -31,8 +31,6 @@ object FrmCompra: TFrmCompra
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitTop = 66
     object Label1: TLabel
       Left = 263
       Top = 33
@@ -86,9 +84,9 @@ object FrmCompra: TFrmCompra
       ParentFont = False
     end
     object DBEdit1: TDBEdit
-      Left = 291
-      Top = 6
-      Width = 108
+      Left = 299
+      Top = 30
+      Width = 89
       Height = 24
       Color = clBtnFace
       DataField = 'Entrada'
@@ -102,8 +100,8 @@ object FrmCompra: TFrmCompra
       TabOrder = 0
     end
     object DBEdit2: TDBEdit
-      Left = 302
-      Top = 32
+      Left = 291
+      Top = 5
       Width = 97
       Height = 24
       Color = clBtnFace
@@ -183,7 +181,6 @@ object FrmCompra: TFrmCompra
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitTop = 120
     object Label5: TLabel
       Left = 15
       Top = 2
@@ -390,6 +387,5 @@ object FrmCompra: TFrmCompra
     Align = alTop
     TabOrder = 6
     OnClick = DBNavigator2Click
-    ExplicitTop = 236
   end
 end

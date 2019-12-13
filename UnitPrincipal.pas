@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
   System.Actions, Vcl.ActnList, System.ImageList, Vcl.ImgList,
-  Vcl.CategoryButtons, Vcl.WinXCtrls, Vcl.StdCtrls;
+  Vcl.CategoryButtons, Vcl.WinXCtrls, Vcl.StdCtrls, frxClass, frxDBSet;
 
 type
   TFrmPrincipal = class(TForm)
@@ -22,15 +22,18 @@ type
     CategoryButtons2: TCategoryButtons;
     panPrincipal: TPanel;
     Cliente: TAction;
-    Registro: TAction;
-    SplitView3: TSplitView;
-    CategoryButtons3: TCategoryButtons;
-    RegistroCliente: TAction;
     Fornecedor: TAction;
     GrupoDeProdutos: TAction;
     Produtos: TAction;
     FormasDePagamento: TAction;
     CompraDeProdutos: TAction;
+    Imprimir: TAction;
+    SplitView3: TSplitView;
+    CategoryButtons4: TCategoryButtons;
+    RelatorioCompra: TAction;
+    frxCompra: TfrxReport;
+    frxDadosCompra: TfrxDBDataset;
+    frxItensCompra: TfrxDBDataset;
     procedure Image1Click(Sender: TObject);
     procedure Action1Execute(Sender: TObject);
     procedure ClienteExecute(Sender: TObject);
@@ -41,6 +44,8 @@ type
     procedure GrupoDeProdutosExecute(Sender: TObject);
     procedure FormasDePagamentoExecute(Sender: TObject);
     procedure CompraDeProdutosExecute(Sender: TObject);
+    procedure RelatorioCompraExecute(Sender: TObject);
+    procedure ImprimirExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -134,6 +139,20 @@ begin
     SplitView1.Open;
 end;
 
+procedure TFrmPrincipal.ImprimirExecute(Sender: TObject);
+begin
+  if SplitView3.Opened then
+    begin
+      SplitView2.Close;
+      SplitView3.Close;
+    end
+  else
+    begin
+      SplitView2.Close;
+      SplitView3.Open;
+    end;
+end;
+
 procedure TFrmPrincipal.ProdutosExecute(Sender: TObject);
 begin
    if FrmCadProdutos = nil then
@@ -168,6 +187,19 @@ begin
       SplitView2.Close;
       SplitView3.Open;
     end;
+end;
+
+procedure TFrmPrincipal.RelatorioCompraExecute(Sender: TObject);
+  var
+    path : string;
+begin
+  path := ExtractFilePath(Application.ExeName);
+  FrmPrincipal.frxCompra.LoadFromFile(path+'compra.fr3');
+  FrmPrincipal.frxCompra.ShowReport();
+ (*
+  FrmCompra.frxCompra.LoadFromFile('C:\Estoque\Estoque-Delphi\Win32\Debug');
+  FrmCompra.frxCompra.PrepareReport(True);
+  FrmCompra.frxCompra.ShowReport;    *)
 end;
 
 end.

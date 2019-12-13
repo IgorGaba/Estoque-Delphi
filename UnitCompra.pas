@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls,
-  Vcl.Mask, Data.DB, Vcl.Grids, Vcl.DBGrids;
+  Vcl.Mask, Data.DB, Vcl.Grids, Vcl.DBGrids, frxClass, frxDBSet;
 
 type
   TFrmCompra = class(TForm)
